@@ -1,0 +1,15 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+OWNER_ID = int(os.getenv("OWNER_ID", "0"))
+
+# ── Лимиты ──────────────────────────────────────
+MAX_WARNINGS = 3          # страйков до бана
+FLOOD_LIMIT = 5            # сообщений
+FLOOD_WINDOW = 10          # секунд
+CAPTCHA_TIMEOUT = 300      # 5 мин на капчу
+MUTE_DURATION = 3600       # 1 час тайм-аут
+ADMIN_CACHE_TTL = 300      # обновление кэша (сек)
